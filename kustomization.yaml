@@ -6,7 +6,5 @@ generatorOptions:
 
 resources: 
   - namespace.yaml
-  - public-vault-tls.yaml
   - public-vault-tls-cert.yaml
-  - private-vault-tls.yaml
   - private-vault-tls-cert.yaml
