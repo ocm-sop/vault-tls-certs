@@ -1,0 +1,24 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: public-vault-tls-cert
+  namespace: vault
+  labels:
+    use-dns01-solver: "true"
+spec:
+  secretName: public-vault-tls
+  subject:
+    organizations:
+    - Open Cluster Management
+  usages:
+    - server auth
+  dnsNames:
+    - vault.apps.openshift-cluster-name.base-domain.tld
+  duration: 720h0m0s
+  renewBefore: 168h0m0s
+  privateKey:
+    algorithm: "RSA"
+    size: 2048
+  issuerRef:
+    name: public-issuer
+    kind: ClusterIssuer
