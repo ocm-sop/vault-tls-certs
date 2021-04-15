@@ -11,9 +11,10 @@ spec:
     organizations:
     - Open Cluster Management
   usages:
-    - server auth
+    - server 
+    - auth
   dnsNames:
-    - vault.apps.openshift-cluster-name.base-domain.tld
+    - vault.$(APPS_DOMAIN)
   duration: 720h0m0s
   renewBefore: 168h0m0s
   privateKey:
