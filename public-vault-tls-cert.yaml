@@ -11,8 +11,7 @@ spec:
     organizations:
     - Open Cluster Management
   usages:
-    - server 
-    - auth
+    - server auth
   dnsNames:
     - vault.$(APPS_DOMAIN)
   duration: 720h0m0s
